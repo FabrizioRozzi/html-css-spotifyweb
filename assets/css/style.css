@@ -1,0 +1,85 @@
+/* GENERALI */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.float-left{
+  float: left;
+}
+
+
+/* MAIN */
+main {
+  max-width:1440px ;
+  height: calc(100vh - 90px);
+  background-color: darkgray;
+}
+
+/* SEZIONE SINISTRA */
+.menu-left{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 230px;
+  background-color: black;
+  color: white;
+}
+
+/* SEZIONE ALTA */
+.menu-alto{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 90px;
+  width: calc(100% - 230px);
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 5px;
+}
+
+.menu-alto button{
+  padding: 15px 40px;
+  border-radius: 40px;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  border: 1px solid white;
+}
+
+/* SEZIONE CONTENUTO */
+.striscia-alta{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 55px;
+}
+
+/* FOOTER */
+footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  max-width: 1440px;
+  background-color: #282828;
+  color: white;
+}
+
+
+
+@media all and (max-width:550px){
+  .menu-left{
+    width: 50px;
+  }
+
+  .menu-alto{
+    width: calc(100% - 50px);
+  }
+}
