@@ -26,27 +26,43 @@ main .menu-left{
   float: left;
   width: 230px;
   height: 100%;
-  background-color: salmon;
+  background-color: #000000;
 }
 
-main .menu-right{
-  height: 100%;
-  width: calc(100% - 230px);
-}
-
-main .menu-left .left-top {
+main .menu-left .left-top{
   height: calc(100% - 80px);
-  background-color:skyblue;
-}
-
-main .menu-left .left-top .nav-logo-mobile{
-  display: none;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 main .menu-left .left-bottom {
   height: 80px;
   background-color: seashell;
 }
+
+main .menu-left .left-top .logo img{
+  max-width: 140px;
+  padding: 20px 0;
+}
+
+main .menu-left .left-top .logo-mobile{
+  width: 50px;
+  padding: 5px 5px;
+}
+
+main .menu-left .left-top .home ul li{
+  width: 30px;
+}
+
+/* SEZIONE DESTRA */
+
+main .menu-right{
+  height: 100%;
+  width: calc(100% - 230px);
+}
+
+
 /* SEZIONE ALTA */
 .menu-alto{
   display: flex;
@@ -81,18 +97,19 @@ main .contenuto{
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 55px;
+  height: auto;
   color: #4F5259;
 }
 
 .contenuto .striscia-alta ul{
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .striscia-alta ul li{
   list-style: none;
-  padding: 0 10px;
+  padding: 0 15px;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -114,6 +131,7 @@ main .contenuto{
   width: calc(90% / 6);
   padding: 8px 0;
   text-align: center;
+  min-width: 210px;
 }
 
 
@@ -169,12 +187,23 @@ footer{
 
 
 
-@media all and (max-width:550px){
-  .menu-left{
+@media (max-width:550px){
+  main .menu-left{
     width: 50px;
   }
-
-  .menu-alto{
+  main .menu-right{
     width: calc(100% - 50px);
+  }
+  main .striscia-alta ul li{
+    font-size: 13px;
+  }
+  main .menu-left .left-top .logo img{
+    display: none;
+  }
+}
+
+@media (min-width:550px){
+  main .menu-left .left-top .logo-mobile img{
+    display: none;
   }
 }
