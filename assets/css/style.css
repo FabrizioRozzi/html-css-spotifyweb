@@ -29,6 +29,11 @@ main .menu-left{
   background-color: salmon;
 }
 
+main .menu-right{
+  height: 100%;
+  width: calc(100% - 230px);
+}
+
 main .menu-left .left-top {
   height: calc(100% - 80px);
   background-color:skyblue;
@@ -48,7 +53,7 @@ main .menu-left .left-bottom {
   justify-content: flex-end;
   align-items: center;
   height: 90px;
-  width: calc(100% - 230px);
+  
   background-color: rgba(0, 0, 0, 0.8);
   padding: 5px;
 }
@@ -66,7 +71,6 @@ main .menu-left .left-bottom {
   color: white;
 }
 main .contenuto{
-  width: calc(100% - 230px);
   height: 100%;
   overflow-y: auto;
   background-color: #141922;
@@ -133,6 +137,22 @@ main .contenuto{
 
 .creato-per .categoria{
   margin-left: 20px;
+}
+
+/* SEZIONE POPOLARI */
+.artisti-popolari{
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.artisti-popolari .categoria{
+  margin-left: 20px;
+}
+
+.artisti-popolari .categoria img{
+  border-radius:50%;
 }
 
 /* FOOTER */
